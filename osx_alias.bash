@@ -1,8 +1,8 @@
 
 
 # network service order
-alias network_service_order_priority_ethernet="networksetup -ordernetworkservices Ethernet `networksetup -listallnetworkservices | grep -v 'An asterisk ' | grep -v Ethernet | sed 's/.*/\"&\"/' | tr '\n' ' '`"
-alias network_service_order_priority_airport="networksetup -ordernetworkservices AirPort `networksetup -listallnetworkservices | grep -v 'An asterisk ' | grep -v AirPort | sed 's/.*/\"&\"/' | tr '\n' ' '`"
+alias network_service_order_priority_ethernet="echo networksetup -ordernetworkservices Ethernet \`networksetup -listallnetworkservices | grep -v 'An asterisk ' | grep -v Ethernet | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash "
+alias network_service_order_priority_airport="echo networksetup -ordernetworkservices AirPort \`networksetup -listallnetworkservices | grep -v 'An asterisk ' | grep -v AirPort | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash"
 
 # Screen Sharing App
 alias screen_sharing="open /System/Library/CoreServices/Screen\ Sharing.app"
