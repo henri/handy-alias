@@ -13,7 +13,7 @@ alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/C
 alias vlc_rotate="/Applications/VLC.app/Contents/MacOS/VLC --vout-filter=transform --transform-type=180"
 
 # recursive md5
-alias checksum_directory_recursivly="find ./* -type f | xargs  md5 | md5"
+alias checksum_directory_recursivly="find ./* -type f -exec md5sum {} + | awk '{print $1}' | sort | md5"
 
 # Date Month
 alias month_number="date +%m"
