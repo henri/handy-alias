@@ -1,8 +1,10 @@
 
 
-# network service order - (note : on 10.7 and later you should change the name of the "AirPort" interface to "Wi-Fi")
+# network service order - (note : on Mac OS 10.7 and later you should change the name of the "AirPort" interface to "Wi-Fi")
+alias network_service_order_priority="networksetup -listnetworkserviceorder"
 alias network_service_order_priority_ethernet="echo networksetup -ordernetworkservices Ethernet \`networksetup -listallnetworkservices | grep -v 'An asterisk ' |  sed s/\^'*'// | grep -v Ethernet | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash"
 alias network_service_order_priority_airport="echo networksetup -ordernetworkservices AirPort \`networksetup -listallnetworkservices | grep -v 'An asterisk ' |  sed s/\^'*'// | grep -v AirPort | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash"
+
 # Screen Sharing App
 alias screen_sharing="open /System/Library/CoreServices/Screen\ Sharing.app"
 
