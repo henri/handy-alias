@@ -1,9 +1,16 @@
 
 
-# network service order - (note : on Mac OS 10.7 and later you should change the name of the "AirPort" interface to "Wi-Fi")
+# network service order - 10.6 and earlier
 alias network_service_order_priority="networksetup -listnetworkserviceorder"
 alias network_service_order_priority_ethernet="echo networksetup -ordernetworkservices Ethernet \`networksetup -listallnetworkservices | grep -v 'An asterisk ' |  sed s/\^'*'// | grep -v Ethernet | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash"
 alias network_service_order_priority_airport="echo networksetup -ordernetworkservices AirPort \`networksetup -listallnetworkservices | grep -v 'An asterisk ' |  sed s/\^'*'// | grep -v AirPort | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash"
+
+# network service order - 10.7 and later (compatible with 10.8 mountian lion) 
+#    - note if prefer not be prompted for a password, then refer the the wiki page for this project 
+#      which conatins links to information relating to configuring the sudoers file (using visudo)
+alias network_service_order_priority_ethernet="echo sudo /usr/sbin/networksetup -ordernetworkservices \\\"Ethernet\\\" `/usr/sbin/networksetup -listallnetworkservices | grep -v 'An asterisk ' | sed s/\^'*'// | grep -v \"Ethernet\" | sed 's/.*/\"&\"/' | tr '\n' ' ' | sed 's/.$//' | sed 's/\"/\\\\\"/g'` | bash"
+alias network_service_order_priority_airport="echo sudo /usr/sbin/networksetup -ordernetworkservices \\\"Wi-Fi\\\" `/usr/sbin/networksetup -listallnetworkservices | grep -v 'An asterisk ' | sed s/\^'*'// | grep -v \"Wi-Fi\" | sed 's/.*/\"&\"/' | tr '\n' ' ' | sed 's/.$//' | sed 's/\"/\\\\\"/g'` | bash"
+alias network_service_order_priority="networksetup -listnetworkserviceorder"
 
 # Screen Sharing App
 alias screen_sharing="open /System/Library/CoreServices/Screen\ Sharing.app"
