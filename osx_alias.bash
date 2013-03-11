@@ -33,6 +33,12 @@ alias screensaver="/System/Library/Frameworks/ScreenSaver.framework/Resources/Sc
 # Battery Cycle Count
 alias battery_cylce_count="system_profiler SPPowerDataType | grep -i Cycle | awk -F \"Cycle count: \" '{print \$2}'"
 
+# Hardware Information
+alias hardware_information_SATA="system_profiler SPSerialATADataType"
+alias hardware_information_USB="system_profiler SPUSBDataType"
+alias hardware_information_FIREWIRE="system_profiler SPFireWireDataType"
+alias hardware_information_THUNDERBOLT="system_profiler SPThunderboltDataType"
+
 # Keyspan
 alias keyspan_connect_and_log="screen -L /dev/tty.KeySerial1"
 alias keyspan_connect="screen /dev/tty.KeySerial1"
