@@ -18,6 +18,14 @@ alias screen_sharing="open /System/Library/CoreServices/Screen\ Sharing.app"
 # apple airport command line utility
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 
+# airport power (10.6 and earlier)
+alias airport_power_on="networksetup -setairportpower AirPort on"
+alias airport_power_off="networksetup -setairportpower AirPort off"
+
+# airport power alias (10.8 typical setup)
+alias airport_power_on="networksetup -setairportpower en1 on"
+alias airport_power_off="networksetup -setairportpower en1 off"
+
 # VLC Rotate Video
 alias vlc_rotate="/Applications/VLC.app/Contents/MacOS/VLC --vout-filter=transform --transform-type=180"
 
