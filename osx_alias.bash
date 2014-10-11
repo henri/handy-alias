@@ -35,7 +35,7 @@ alias airport_power_off="networksetup -setairportpower en1 off"
 alias vlc_rotate="/Applications/VLC.app/Contents/MacOS/VLC --vout-filter=transform --transform-type=180"
 
 # recursive md5
-alias checksum_directory_recursivly="find ./* -type f -exec md5 {} + | awk '{print $1}' | sort | md5"
+alias checksum_directory_recursivly="find ./* -type f -exec md5 {} + | awk '{print \$1}' | sort | md5"
 
 # Date Month
 alias month_number="date +%m"
