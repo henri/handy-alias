@@ -19,6 +19,7 @@ alias vpn_disconnect="/usr/bin/env osascript -e 'tell application \"System Event
 
 # Screen Sharing App
 alias screen_sharing="open /System/Library/CoreServices/Screen\ Sharing.app"
+alias ovnc="open vnc://" # you can add a favoite into this - vnc://user@server:port to connect - if not it will just open the screen sharing application
 
 # apple airport command line utility
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
