@@ -12,6 +12,8 @@ alias network_service_order_priority_ethernet="echo sudo /usr/sbin/networksetup 
 alias network_service_order_priority_airport="echo sudo /usr/sbin/networksetup -ordernetworkservices \\\"Wi-Fi\\\" \`/usr/sbin/networksetup -listallnetworkservices | grep -v 'An asterisk ' | sed s/\^'*'// | grep -xv \"Wi-Fi\" | sed 's/.*/\"&\"/' | tr '\n' ' ' | sed 's/.$//' | sed 's/\"/\\\\\"/g'\` | bash"
 alias network_service_order_priority="networksetup -listnetworkserviceorder"
 
+# networksetup [-setnetworkserviceenabled networkservice on | off]
+
 # vpn connect / disconnect
 alias vpn_connect="/usr/bin/env osascript -e 'tell application \"System Events\"' -e 'tell current location of network preferences' -e 'set VPN to service \"VPN NAME\" -- your VPN name here' -e 'if exists VPN then connect VPN' -e 'end tell' -e 'end tell' > /dev/null"
 alias vpn_disconnect="/usr/bin/env osascript -e 'tell application \"System Events\"' -e 'tell current location of network preferences' -e 'set VPN to service \"VPN NAME\" -- your VPN name here' -e 'if exists VPN then disconnect VPN' -e 'end tell' -e 'end tell' > /dev/null"
