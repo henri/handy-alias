@@ -2,7 +2,7 @@
 
 About
 --------
-The scripts are basically handy alias files for BASH and ZSH.
+The scripts are basically handy alias files for BASH, ZSH and FISH.
 
 License: [GNU General Public License v3][1]
 
