@@ -73,4 +73,10 @@ alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
 
+# screen saver time out value
+alias start_screensaver="open -a ScreenSaverEngine"
+alias screensaver_timeout_1min="defaults -currentHost write com.apple.screensaver idleTime 60"
+alias screensaver_timeout_2min="defaults -currentHost write com.apple.screensaver idleTime 120"
+alias screensaver_timeout_30min="defaults -currentHost write com.apple.screensaver idleTime 1800"
+
 
