@@ -4,7 +4,7 @@ About
 --------
 The scripts are basically handy alias files for BASH, ZSH and FISH.
 
-Note for fish alias you will need to slightly alter the command : 
+Note for FISH alias you will need to slightly alter the command : 
    1. `alias my_amazing_thing "echo \"my amazing thing\"" # set the alias up in the current shell`
    2. `funcsave my_amazing_thing # save my_amazing_funcation, deafult directory : ~/.config/fish/functions`
 
