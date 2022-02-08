@@ -4,6 +4,11 @@ About
 --------
 The scripts are basically handy alias files for BASH, ZSH and FISH.
 
+Note for fish alias you will need to slightly alter the command : 
+  $ alias my_amazing_thing "echo \"my amazing thing\""
+  $ funcsave my_amazing_thing
+  \# By deafult the these are stored in functions in this directory : ~/.config/fish/functions
+
 License: [GNU General Public License v3][1]
 
 Additional Information
