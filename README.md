@@ -24,5 +24,10 @@ Any questions then just let me know.
 
 Pick and chose the ones which are handy for you =:^)
 
-  [1]: http://www.gnu.org/licenses/gpl.html
+Mac OS Specific Information - Wiki
+---------
+If you are using any handy aliass specific to macOS you may find it convenient to allow your user to run some system tools (which normally need to be run as a super user) as yoruself. [This wiki page][2] will provide some setup details.
+
+  [1]: http://www.gnu.org/licenses/gpl.html  
+  [2]: https://github.com/henri/handy-alias/wiki/Network-Service-Order-%3A-Mac-OS-X
 
