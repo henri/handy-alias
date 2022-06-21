@@ -1,6 +1,6 @@
 
 # paste the clip board to the command line
-pbp="pbpaste && echo"
+alias pbp="pbpaste && echo"
 
 # network service order - 10.6 and earlier
 alias network_service_order_priority="networksetup -listnetworkserviceorder"
