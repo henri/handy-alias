@@ -2,6 +2,9 @@
 # paste the clip board to the command line
 alias pbp="pbpaste && echo"
 
+# copy clipboard from remote system
+alias hostname-pbcopy "ssh login@hostname 'pbpaste ; echo' | pbcopy"
+
 # network service order - 10.6 and earlier
 alias network_service_order_priority="networksetup -listnetworkserviceorder"
 alias network_service_order_priority_ethernet="echo networksetup -ordernetworkservices Ethernet \`networksetup -listallnetworkservices | grep -v 'An asterisk ' |  sed s/\^'*'// | grep -xv Ethernet | sed 's/.*/\"&\"/' | tr '\n' ' '\` | bash"
