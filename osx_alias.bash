@@ -3,7 +3,8 @@
 alias pbp="pbpaste && echo"
 
 # copy clipboard from remote system
-alias hostname-pbcopy "ssh login@hostname 'pbpaste ; echo' | pbcopy"
+alias remotehost_pbcopy="ssh login@hostname 'pbpaste ; echo' | pbcopy"
+
 
 # network service order - 10.6 and earlier
 alias network_service_order_priority="networksetup -listnetworkserviceorder"
