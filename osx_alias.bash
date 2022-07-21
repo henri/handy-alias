@@ -5,6 +5,9 @@ alias pbp="pbpaste && echo"
 # copy clipboard from remote system
 alias remotehost_pbcopy="ssh login@hostname 'pbpaste ; echo' | pbcopy"
 
+# enable / disable IPV6 (note you will need to set the names of other network interfaces you may have on your system - these are the defaults
+alias ipv6_off="networksetup -setv6off Ethernet && networksetup -setv6off Wi-Fi"
+alias ipv6_auto="networksetup -setv6automatic Wi-Fi && networksetup -setv6automatic Ethernet"
 
 # network service order - 10.6 and earlier
 alias network_service_order_priority="networksetup -listnetworkserviceorder"
