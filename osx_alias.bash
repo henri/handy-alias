@@ -3,7 +3,7 @@
 alias pbp="pbpaste && echo"
 
 # copy clipboard from remote system
-alias remotehost_pbcopy="ssh login@hostname 'pbpaste ; echo' | pbcopy"
+alias remotehost_pbcopy="ssh login@hostname 'pbpaste' | pbcopy"
 
 # paste clipboard to remote system
 alias remotehost_pbpaste="pbpaste | ssh login@hostname 'cat - | pbcopy'"
