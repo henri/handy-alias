@@ -1,4 +1,10 @@
 
+# enable opendrop reciving 
+alias airdrop="pushd /tmp/  ; echo Reciving directory is : /tmp/ ; opendrop receive ; popd" 
+
+# enable opendrop reciving for 5 min
+alias airdrop_5min="pushd /tmp/  ; echo Reciving directory is : /tmp/ ; echo Command timeout is : 5min ; gtimeout --preserve-status 5m opendrop receive ; popd"
+
 # paste the clip board to the command line
 alias pbp="pbpaste && echo"
 
