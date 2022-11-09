@@ -93,8 +93,11 @@ alias keyspan_connect="screen /dev/tty.KeySerial1"
 # flush dns 10.5
 alias flush_dns_cache="dscacheutil -flushcache"
 
-# fush dns 10.15 and later
+# flush dns 10.15 and later
 alias flush_dns_cache="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+# clear arp cache
+alias clear_arp_cache="sudo arp -a -l"
 
 
 # Safe Sleep
