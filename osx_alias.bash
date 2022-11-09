@@ -117,3 +117,4 @@ alias screensaver_timeout_2min="defaults -currentHost write com.apple.screensave
 alias screensaver_timeout_30min="defaults -currentHost write com.apple.screensaver idleTime 1800"
 
 
+
