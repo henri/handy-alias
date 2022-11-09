@@ -1,5 +1,5 @@
 
-# enable opendrop reciving 
+# enable opendrop reciving
 alias airdrop="pushd $(mktemp -d /tmp/opendrop-$(date +%Y-%m-%d).XXXXXX) ; echo Reciving directory : $(pwd) ; opendrop receive ; popd" 
 
 # enable opendrop reciving for 5 min
