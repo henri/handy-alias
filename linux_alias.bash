@@ -34,5 +34,8 @@ alias weather="curl https://wttr.in/Tokyo"
 alias weather-auto-update="~bin/weatherupdate.bash"
 
 # dump the deconf /org/ to a file (you must make the backup directory manually) 
-alias dconf-backup-now 'dconf dump /org/ >> ~/backup-config/dconf-org-backup-(date +%y-%m-%d).txt
+alias dconf-backup-now="dconf dump /org/ >> ~/backup-config/dconf-org-backup-(date +%y-%m-%d).txt"
+
+# quickly edit the esspanso file with sublime text in a new window
+alias edit-esspanso="subl -n ~/.config/espanso/match/base.yml"
 
