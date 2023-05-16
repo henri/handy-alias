@@ -9,11 +9,17 @@ alias airdrop_5min="pushd $(mktemp -d /tmp/opendrop-$(date +%Y-%m-%d).XXXXXX) ; 
 # paste the clip board to the command line
 alias pbp="pbpaste && echo"
 
-# copy clipboard from remote system
+# copy clipboard from remote (macOS) system
 alias remotehost_pbcopy="ssh login@hostname 'pbpaste' | pbcopy"
 
-# paste clipboard to remote system
+# paste clipboard to remote (macOS) system
 alias remotehost_pbpaste="pbpaste | ssh login@hostname 'cat - | pbcopy'"
+
+# copy clipboard from remote (gnu/linux) system
+alias remotehost_pbcopy="ssh login@hostname 'xclip -o' | pbcopy"
+
+# paste clipboard to remote (gnu/linux) system
+alias remotehost_pbpaste="pbpaste | ssh login@hostname 'cat - | xclip -sel clip'"
 
 
 # enable / disable IPV6 (note you will need to set the names of other network interfaces you may have on your system - these are the defaults)
