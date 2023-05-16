@@ -24,3 +24,11 @@ alias month_number="date +%m"
 
 # VLC Rotate Video
 alias vlc_rotate="vlc--vout-filter=transform --transform-type=180"
+
+# temporarly start a vnc server connected to your session
+vnc_serve="x11vnc -noipv6 -forever -listen 127.0.0.1 -usepw -find"
+
+# show the active windos for an application using xdotool
+alias show="~/bin/show_all_xdotool.bash"
+
+
