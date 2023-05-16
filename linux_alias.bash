@@ -39,3 +39,7 @@ alias dconf-backup-now="dconf dump /org/ >> ~/backup-config/dconf-org-backup-(da
 # quickly edit the esspanso file with sublime text in a new window
 alias edit-esspanso="subl -n ~/.config/espanso/match/base.yml"
 
+# get the key press hex code - fish only (unless you launch fish and run the command)
+alias fish_key_reader="/usr/bin/fish_key_reader"
+
+
