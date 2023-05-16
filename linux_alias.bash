@@ -13,10 +13,6 @@ alias remotehost_pbcopy="ssh login@hostname 'xclip -o' | xclip -sel clip"
 # paste clipboard to remote (gnu/linux) system
 alias remotehost_pbpaste="xclip -o | ssh login@hostname 'cat - | xclip -sel clip'"
 
-
-# start cinnamon screensaver
-alias screensaver="cinnamon-screensaver-command --activate --lock 2> /dev/null"
-
 # Date Month
 alias month_number="date +%m"
 
@@ -41,5 +37,16 @@ alias edit-esspanso="subl -n ~/.config/espanso/match/base.yml"
 
 # get the key press hex code - fish only (unless you launch fish and run the command)
 alias fish_key_reader="/usr/bin/fish_key_reader"
+
+# start cinnamon screensaver
+alias screensaver="cinnamon-screensaver-command --activate --lock 2> /dev/null"
+
+# cinnamon screensaver timeout
+alias screensaver_timeout_1min="gsettings set org.cinnamon.desktop.session idle-delay 60"
+alias screensaver_timeout_2min="gsettings set org.cinnamon.desktop.session idle-delay 120"
+alias screensaver_timeout_30min="gsettings set org.cinnamon.desktop.session idle-delay 1800"
+
+# cinnamon get screensaver timeout - fish specific syntax
+alias screensaver_current_timeout="echo (gsettings get org.cinnamon.desktop.session idle-delay | awk '{print \$2}') seconds / or / ( math ( gsettings get org.cinnamon.desktop.session idle-delay | awk '{print \$2}' ) / 60) miniutes"
 
 
