@@ -49,6 +49,8 @@ alias screensaver_timeout_30min="gsettings set org.cinnamon.desktop.session idle
 # cinnamon get screensaver timeout - fish specific syntax
 alias screensaver_current_timeout="echo (gsettings get org.cinnamon.desktop.session idle-delay | awk '{print \$2}') seconds / or / ( math ( gsettings get org.cinnamon.desktop.session idle-delay | awk '{print \$2}' ) / 60) miniutes"
 
-
+# allow / disallow root to start x apps
+alias x_add_root="xhost +si:localuser:root"
+alias x_remove_root="xhost -si:localuser:root"
 
 
