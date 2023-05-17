@@ -49,8 +49,6 @@ alias screensaver_timeout_30min="gsettings set org.cinnamon.desktop.session idle
 # cinnamon get screensaver timeout - fish specific syntax
 alias screensaver_current_timeout="echo (gsettings get org.cinnamon.desktop.session idle-delay | awk '{print \$2}') seconds / or / ( math ( gsettings get org.cinnamon.desktop.session idle-delay | awk '{print \$2}' ) / 60) miniutes"
 
-# launch GUI application in with X authority
-alias gksudo='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 
 
 
