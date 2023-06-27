@@ -22,6 +22,15 @@ alias vlc_rotate="vlc--vout-filter=transform --transform-type=180"
 # temporarly start a vnc server connected to your session
 vnc_serve="x11vnc -noipv6 -forever -listen 127.0.0.1 -usepw -find"
 
+# alterative temporary vnc server setup : vino-preferences
+# additional information :  https://askubuntu.com/questions/304017/how-to-set-up-remote-desktop-sharing-through-ssh
+# sudo -s
+# export DISPLAY=:0.0
+# xhost +
+# /usr/lib/vino/vino-server & 
+
+# another vnc approach is to load a service with systemctl / init.d
+
 # show the active windos for an application using xdotool
 alias show="~/bin/show_all_xdotool.bash"
 
