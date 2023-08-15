@@ -62,4 +62,8 @@ alias screensaver_current_timeout="echo (gsettings get org.cinnamon.desktop.sess
 alias x_add_root="xhost +si:localuser:root"
 alias x_remove_root="xhost -si:localuser:root"
 
+# start a screen session running sxhkd ( possible sxhkd config file : https://gist.github.com/henri/883f4ef16bf81effd992a8ce91d619eb )
+# allows fake key remapping - fine for most typing speed purposes 
+alias start_sxhkd 'screen -S sxhkd_keys_mod -md bash -lc sxhkd'
+
 
