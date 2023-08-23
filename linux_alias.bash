@@ -64,6 +64,10 @@ alias x_remove_root="xhost -si:localuser:root"
 
 # start a screen session running sxhkd ( possible sxhkd config file : https://gist.github.com/henri/883f4ef16bf81effd992a8ce91d619eb )
 # allows fake key remapping - fine for most typing speed purposes 
-alias start_sxhkd 'screen -S sxhkd_keys_mod -md bash -lc sxhkd'
+alias start_sxhkd="screen -S sxhkd_keys_mod -md bash -lc sxhkd"
+
+# send notification to cinimon
+alias lunchtime="/usr/bin/notify-send  "Lunch: " "Please, take a lunch!"
+
 
 
