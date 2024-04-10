@@ -31,7 +31,7 @@ vnc_serve="x11vnc -noipv6 -forever -listen 127.0.0.1 -usepw -find"
 
 # another vnc approach is to load a service with systemctl / init.d
 
-# show the active windos for an application using xdotool
+# show the active windows for an application using xdotool
 alias show="~/bin/show_all_xdotool.bash"
 
 # show the weather
