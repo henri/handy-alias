@@ -38,6 +38,9 @@ alias show="~/bin/show_all_xdotool.bash"
 alias weather="curl https://wttr.in/Tokyo"
 alias weather-auto-update="~bin/weatherupdate.bash"
 
+# termdown shortcut blink plus basic
+alias td="termdown --no-figlet -b"
+
 # dump the deconf /org/ to a file (you must make the backup directory manually) 
 alias dconf-backup-now="dconf dump /org/ >> ~/backup-config/dconf-org-backup-(date +%y-%m-%d).txt"
 
