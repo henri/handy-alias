@@ -129,3 +129,8 @@ alias screensaver_timeout_30min="defaults -currentHost write com.apple.screensav
 alias weather="curl https://wttr.in/Tokyo"
 alias weather-auto-update="~bin/weatherupdate.bash"
 
+
+# bluetooth unpair and then pair to device - if the device is paired use 'blueutil  --paired' to obtain the device mac address
+alias bluetooth_repair_<DEVICE-NAME>="blueutil --unpair '<DEVICE-MAC-ADDRESS>' && sleep 10 ; blueutil --pair '<DEVICE-MAC-ADDRESS>'"
+
+
