@@ -125,6 +125,9 @@ alias screensaver_timeout_1min="defaults -currentHost write com.apple.screensave
 alias screensaver_timeout_2min="defaults -currentHost write com.apple.screensaver idleTime 120"
 alias screensaver_timeout_30min="defaults -currentHost write com.apple.screensaver idleTime 1800"
 
+# setup micro view only mode
+alias mview="micro -readonly on"
+
 # show the weather
 alias weather="curl https://wttr.in/Tokyo"
 alias weather-auto-update="~bin/weatherupdate.bash"
