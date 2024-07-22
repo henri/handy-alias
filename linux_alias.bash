@@ -69,8 +69,11 @@ alias x_remove_root="xhost -si:localuser:root"
 # allows fake key remapping - fine for most typing speed purposes 
 alias start_sxhkd="screen -S sxhkd_keys_mod -md bash -lc sxhkd"
 
-# send notification to cinimon
-alias lunchtime="/usr/bin/notify-send  "Lunch: " "Please, take a lunch!"
+# send notification to cinnimon
+alias lunchtime="/usr/bin/notify-send  \"Lunch: \" \"Please, take a lunch!\""
+
+# setup micro view only mode
+alias mview="micro -readonly on"
 
 # fish function - use firefox to search for a gist (replace with your username to search your gist) - this will launch firefox if it is not running (otherwise it will open a new tab).
 function gist_search ; firefox "https://gist.github.com/search?q=user%3Ahenri+%22$argv%22&ref=searchresults" ; end
