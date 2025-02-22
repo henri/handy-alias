@@ -125,8 +125,10 @@ alias screensaver_timeout_1min="defaults -currentHost write com.apple.screensave
 alias screensaver_timeout_2min="defaults -currentHost write com.apple.screensaver idleTime 120"
 alias screensaver_timeout_30min="defaults -currentHost write com.apple.screensaver idleTime 1800"
 
+
 # setup micro view only mode
 alias mview="micro -readonly on"
+
 
 # show the weather
 alias weather="curl https://wttr.in/Tokyo"
@@ -136,4 +138,7 @@ alias weather-auto-update="~bin/weatherupdate.bash"
 # bluetooth unpair and then pair to device - if the device is paired use 'blueutil  --paired' to obtain the device mac address
 alias bluetooth_repair_<DEVICE-NAME>="blueutil --unpair '<DEVICE-MAC-ADDRESS>' && sleep 10 ; blueutil --pair '<DEVICE-MAC-ADDRESS>'"
 
+
+# show battery and charger information
+alias charging_stats="ioreg -rw0 -c AppleSmartBattery | grep -i Voltage"
 
