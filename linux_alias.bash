@@ -1,5 +1,12 @@
+# copy clipboard from standard to standard output (eg. pipe from clipboard)
+alias pbc="xclip" # standard input to selection buffer
+alias pbcopy="xclip -sel c" # standard input to clipboard
+alias pbcopy="xclip -selection clipboard" # standard input to clipboard
+
 # paste the clip board to the command line
-alias pbp="xclip -o && echo"
+alias pbp="xclip -o && echo" # selection buffer to standard out
+alias pbpaste="xclip -sel c -o" # clipboard to standard out
+alias pbpaste="xclip -selection clipboard -o" # clipboard to standard out
 
 # copy clipboard from remote (macOS) system
 alias remotehost_pbcopy="ssh login@hostname 'pbpaste' | xclip -sel clip"
