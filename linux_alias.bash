@@ -94,9 +94,9 @@ alias mview="micro -readonly on"
 function gist_search ; firefox "https://gist.github.com/search?q=user%3Ahenri+%22$argv%22&ref=searchresults" ; end
 
 # setup an alias to clear the enviroment varaible : SSH_AUTH_SOCK # this is not --erase just clear it to empty 
-alias -s ssh-agent-unset "set -gx SSH_AUTH_SOCK_OLD \$SSH_AUTH_SOCK ; set -gx SSH_AUTH_SOCK \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD)"
+alias -s ssh-agent-unset "set -gx SSH_AUTH_SOCK_OLD \$SSH_AUTH_SOCK ; set -gx SSH_AUTH_SOCK \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD) echo 'To Reset SSH_AUTH_SOCK : ssh-agent-reset'"
 
 # reconfigure the envirment variable SSH_AUTH_SOCK back to what it was before running the ssh-agent-unset function/alias
-alias -s ssh-agent-reset "set -gx SSH_AUTH_SOCK \$SSH_AUTH_SOCK_OLD ; set -gx SSH_AUTH_SOCK_OLD \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD)"
+alias -s ssh-agent-reset "set -gx SSH_AUTH_SOCK \$SSH_AUTH_SOCK_OLD ; set -gx SSH_AUTH_SOCK_OLD \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD) ; echo 'To Unset SSH_AUTH_SOCK : ssh-agent-unset' "
 
 
