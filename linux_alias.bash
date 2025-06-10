@@ -1,3 +1,6 @@
+# CROSS COMPATIABLE BASH, ZSH, and FISH FUNCTIONS (just alter the format)
+# ///////////////////////////////////////////////////////////////////////
+
 # copy clipboard from standard to standard output (eg. pipe from clipboard)
 alias pbc="xclip" # standard input to selection buffer
 alias pbcopy="xclip -sel c" # standard input to clipboard
@@ -82,9 +85,17 @@ alias lunchtime="/usr/bin/notify-send  \"Lunch: \" \"Please, take a lunch!\""
 # setup micro view only mode
 alias mview="micro -readonly on"
 
+
+# FISH FUNCTIONS ONLY BELOW (unless you alter them significantly)
+# ///////////////////////////////////////////////////////////////////////
+
 # fish function - use firefox to search for a gist (replace with your username to search your gist) - this will launch firefox if it is not running (otherwise it will open a new tab).
 function gist_search ; firefox "https://gist.github.com/search?q=user%3Ahenri+%22$argv%22&ref=searchresults" ; end
 
+# setup an alias to clear the enviroment varaible : SSH_AUTH_SOCK # this is not --erase just clear it to empty 
+alias -s ssh-agent-unset "set -gx SSH_AUTH_SOCK_OLD \$SSH_AUTH_SOCK ; set -gx SSH_AUTH_SOCK \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD)"
 
+# reconfigure the envirment variable SSH_AUTH_SOCK back to what it was before running the ssh-agent-unset function/alias
+alias -s ssh-agent-reset "set -gx SSH_AUTH_SOCK \$SSH_AUTH_SOCK_OLD ; set -gx SSH_AUTH_SOCK_OLD \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD)"
 
 
