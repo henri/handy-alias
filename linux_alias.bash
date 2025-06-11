@@ -85,6 +85,9 @@ alias lunchtime="/usr/bin/notify-send  \"Lunch: \" \"Please, take a lunch!\""
 # setup micro view only mode
 alias mview="micro -readonly on"
 
+# list latest creation times of directory items in reverse order
+alias ls-latest-time-created-reversed="ls -ltr --time=creation"
+
 
 # FISH FUNCTIONS ONLY BELOW (unless you alter them significantly)
 # ////////////////////////////////////////////////////////////////////////////////////////
