@@ -88,19 +88,22 @@ alias mview="micro -readonly on"
 # list latest creation times of directory items in reverse order
 alias ls-latest-time-created-reversed="ls -ltr --time=creation"
 
-
 # FISH FUNCTIONS ONLY BELOW (unless you alter them significantly)
 # ////////////////////////////////////////////////////////////////////////////////////////
 # Link to Fish Snippits : https://gist.github.com/henri/4f034f04b35c01e089e98350c902bda8
 
 # fish function - use firefox to search for a gist (replace with your username to search your gist) - this will launch firefox if it is not running (otherwise it will open a new tab).
-function gist_search ; firefox "https://gist.github.com/search?q=user%3Ahenri+%22$argv%22&ref=searchresults" ; end
+function gist_search ; firefox "https://gist.github.com/search?q=user%3Ahenri+%22$argv%22&ref=searchresults" ; end ; funcsave gist_search
+
+# work out the start and elapsed time for a PID
+function pid_start_elapsed ; ps -p $argv -o lstart,etime,etimes ; end ; funcsave pid_start_elapsed
 
 # setup an alias to clear the enviroment varaible : SSH_AUTH_SOCK # this is not --erase just clear it to empty 
 alias -s ssh-agent-unset "set -gx SSH_AUTH_SOCK_OLD \$SSH_AUTH_SOCK ; set -gx SSH_AUTH_SOCK \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD) ; echo 'To Reset SSH_AUTH_SOCK : ssh-agent-reset'"
 
 # reconfigure the envirment variable SSH_AUTH_SOCK back to what it was before running the ssh-agent-unset function/alias
 alias -s ssh-agent-reset "set -gx SSH_AUTH_SOCK \$SSH_AUTH_SOCK_OLD ; set -gx SSH_AUTH_SOCK_OLD \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD) ; echo 'To Unset SSH_AUTH_SOCK : ssh-agent-unset'"
+
 
 
 
