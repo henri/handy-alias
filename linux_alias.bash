@@ -1,27 +1,49 @@
 # CROSS COMPATIABLE BASH, ZSH, and FISH FUNCTIONS (just alter the format)
 # ///////////////////////////////////////////////////////////////////////
 
+# xclip (x11 clipboard)
+#
 # copy clipboard from standard to standard output (eg. pipe from clipboard)
 alias pbc="xclip" # standard input to selection buffer
 alias pbcopy="xclip -sel c" # standard input to clipboard
 alias pbcopy="xclip -selection clipboard" # standard input to clipboard
-
+#
 # paste the clip board to the command line
 alias pbp="xclip -o && echo" # selection buffer to standard out
 alias pbpaste="xclip -sel c -o" # clipboard to standard out
 alias pbpaste="xclip -selection clipboard -o" # clipboard to standard out
 
+# wl-copy / wl-paste (wayland clipboard)
+#
+# copy clipboard from standard to standard output (eg. pipe from clipboard)
+alias pbc="wl-copy" # standard input to selection buffer
+alias pbcopy="wl-copy -p" # standard input to clipboard
+alias pbcopy="wl-copy --primary" # standard input to clipboard
+#
+# paste the clip board to the command line
+alias pbp="wl-paste && echo" # selection buffer to standard out
+alias pbpaste="wl-paste -p" # clipboard to standard out
+alias pbpaste="wl-paste --primary" # clipboard to standard out
+
 # copy clipboard from remote (macOS) system
 alias remotehost_pbcopy="ssh login@hostname 'pbpaste' | xclip -sel clip"
-
+#
 # paste clipboard to remote (macOS) system
 alias remotehost_pbpaste="xclip -o | ssh login@hostname 'cat - | pbcopy'"
 
-# copy clipboard from remote (gnu/linux) system
+# copy clipboard from remote (gnu/linux) system X11
 alias remotehost_pbcopy="ssh login@hostname 'xclip -o' | xclip -sel clip"
-
-# paste clipboard to remote (gnu/linux) system
+#
+# paste clipboard to remote (gnu/linux) system X11
 alias remotehost_pbpaste="xclip -o | ssh login@hostname 'cat - | xclip -sel clip'"
+
+# copy clipboard from remote (gnu/linux) system wayland
+alias remotehost_pbcopy="ssh login@hostname 'wl-paste' | wl-copy"
+#
+# paste clipboard to remote (gnu/linux) system wayland
+alias remotehost_pbpaste="wl-paste | ssh login@hostname 'cat - | wl-copy'"
+
+
 
 # Date Month
 alias month_number="date +%m"
