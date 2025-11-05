@@ -126,7 +126,9 @@ alias -s ssh-agent-unset "set -gx SSH_AUTH_SOCK_OLD \$SSH_AUTH_SOCK ; set -gx SS
 # reconfigure the envirment variable SSH_AUTH_SOCK back to what it was before running the ssh-agent-unset function/alias
 alias -s ssh-agent-reset "set -gx SSH_AUTH_SOCK \$SSH_AUTH_SOCK_OLD ; set -gx SSH_AUTH_SOCK_OLD \"\" ; echo SSH_AUTH_SOCK : (echo \$SSH_AUTH_SOCK) ; echo SSH_AUTH_SOCK_OLD : (echo \$SSH_AUTH_SOCK_OLD) ; echo 'To Unset SSH_AUTH_SOCK : ssh-agent-unset'"
 
-
+# enable / disable proxy exports - yes, this approach works in fish (alter the details to use your specific protocal / interent protocal address and port)
+alias -s cli_proxy_enable 'export http_proxy="http://192.168.1.1:5678" ; export https_proxy="http://192.168.1.1:5678" ; export HTTP_PROXY="http://192.168.1.1:5678" ; export HTTPS_PROXY="http://192.168.1.1:5678" '
+alias -s cli_proxy_disable 'export http_proxy="" ; export https_proxy="" ; export HTTP_PROXY="" ; export HTTPS_PROXY="" '
 
 
 
