@@ -130,7 +130,8 @@ alias -s ssh-agent-reset "set -gx SSH_AUTH_SOCK \$SSH_AUTH_SOCK_OLD ; set -gx SS
 alias -s cli_proxy_enable 'export http_proxy="http://192.168.1.1:5678" ; export https_proxy="http://192.168.1.1:5678" ; export HTTP_PROXY="http://192.168.1.1:5678" ; export HTTPS_PROXY="http://192.168.1.1:5678" '
 alias -s cli_proxy_disable 'export http_proxy="" ; export https_proxy="" ; export HTTP_PROXY="" ; export HTTPS_PROXY="" '
 
-
+# show fish history with time stamps
+alias -s history-time 'builtin history --show-time="%Y-%m-%d %H:%M:%S "'
 
 
 
