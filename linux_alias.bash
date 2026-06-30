@@ -133,5 +133,10 @@ alias -s cli_proxy_disable 'export http_proxy="" ; export https_proxy="" ; expor
 # show fish history with time stamps
 alias -s history-time 'builtin history --show-time="%Y-%m-%d %H:%M:%S "'
 
+# send the clipboard into spb (creating a temporary browser session) : requires SPB (start private browser) : https://github.com/henri/spb
+alias -s spb-clipboard 'echo (pbpaste) | spb'
+
+
+
 
 
