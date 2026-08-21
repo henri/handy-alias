@@ -136,6 +136,8 @@ alias -s history-time 'builtin history --show-time="%Y-%m-%d %H:%M:%S "'
 # send the clipboard into spb (creating a temporary browser session) : requires SPB (start private browser) : https://github.com/henri/spb
 alias -s spb-clipboard 'echo (pbpaste) | spb'
 
+# save image from clipboard to disk (save to temporary directory)
+alias -s clipboard_image_save="xclip -selection clipboard -t image/png -o > /tmp/image-$(date +"%Y-%m-%d-%H-%M").png && echo saved image : /tmp/image-$(date +"%Y-%m-%d-%H-%M").png"
 
 
 
