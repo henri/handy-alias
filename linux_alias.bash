@@ -139,6 +139,10 @@ alias -s spb-clipboard 'echo (pbpaste) | spb'
 # save image from clipboard to disk (save to temporary directory)
 alias -s clipboard_image_save="xclip -selection clipboard -t image/png -o > /tmp/image-$(date +"%Y-%m-%d-%H-%M").png && echo saved image : /tmp/image-$(date +"%Y-%m-%d-%H-%M").png"
 
+# tmux session and window picker
+alias -s tmux_session_picker "tmux switch-client -t $(tmux list-sessions -F "#{session_name}" | fzf)"
+alias -s tmux_window_picker 'tmux select-window -t $(tmux list-windows -F "#{window_index}:#{window_name}" | fzf | cut -d: -f1)'
+
 
 
 
