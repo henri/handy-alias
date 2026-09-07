@@ -144,6 +144,8 @@ alias -s tmux_session_picker "tmux switch-client -t $(tmux list-sessions -F "#{s
 alias -s tmux_window_picker 'tmux select-window -t $(tmux list-windows -F "#{window_index}:#{window_name}" | fzf | cut -d: -f1)'
 
 # use a web cam as a mirror with mpv
+#    find video device : 'v4l2-ctl --list-devices' 
+#    find video format : 'v4l2-ctl --list-formats-ext -d <video-device>'
 alias -s mirror_webcam_mpv "mpv av://v4l2:/dev/video0 --no-cache --untimed --profile=low-latency --vf=hflip
 
 
